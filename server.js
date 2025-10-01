@@ -24,7 +24,7 @@ const rooms = new Map();
 function newGameState(w, h) {
   return {
     w, h,
-    ball: { x: w / 2, y: h / 2, vx: 0.28, vy: 0.36, r: 8 },
+    ball: { x: w / 2, y: h / 2, vx: 0.24, vy: 0.31, r: 8 },
     p1: { x: w / 2, vx: 0, score: 0 }, // верхняя
     p2: { x: w / 2, vx: 0, score: 0 }, // нижняя
     paddle: { w: 90, h: 14, margin: 18, speed: 0.6 },
@@ -245,3 +245,4 @@ setInterval(() => {
 
 const port = Number(process.env.PORT) || 3000;
 server.listen(port, () => console.log(`Server running on ${port}`));
+
